@@ -21,5 +21,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
 
-  spec.add_dependency "faraday", "~> 2.7.4"
+  spec.add_dependency "faraday", "~> 2.9.0"
 end
