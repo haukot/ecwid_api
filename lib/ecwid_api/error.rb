@@ -8,7 +8,7 @@ module EcwidApi
 
     def get_response_info(response)
       url = response.env.url
-      url.query = url.query.sub(/token=[^&]*/, 'token=**SECRET**')
+      url.query = url.query.to_s.sub(/token=[^&]*/, 'token=**SECRET**')
       message = "url: #{url}, response (#{response.status})\n#{response.body}"
       if response.respond_to?(:reason_phrase)
         message = "#{response.reason_phrase} #{message}"
